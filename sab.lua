@@ -1,1 +1,1 @@
-print("xd")
+local fold = Instance.new("Folder")
