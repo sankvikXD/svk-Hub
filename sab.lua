@@ -147,3 +147,59 @@ stealr.MouseButton1Click:Connect(function()
     esp.BackgroundTransparency = 1
 end)
 -- 
+local jumpbut = Instance.new("TextButton")
+Instance.new("TextButton")
+jumpbut.Parent = fr
+jumpbut.Name = "infjump"
+jumpbut.Size = UDim2.new(0,342,0,50)
+jumpbut.Position = UDim2.new(0.379,0,0.168,0)
+jumpbut.BackgroundTransparency = 0.85
+Instance.new("UICorner")
+Instance.new("UICorner").Parent = jumpbut
+jumpbut.Text = ""
+local strok = Instance.new("UIStroke")
+Instance.new("UIStroke")
+strok.Parent = jumpbut
+strok.Color = Color3.fromRGB(141,141,141)
+strok.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+local titll = Instance.new("TextLabel")
+titll.Parent = jumpbut
+titll.Name = "status"
+titll.Font = Enum.Font.Michroma
+titll.TextSize = 20
+titll.Text = "Off"
+titll.BackgroundTransparency = 1
+titll.TextColor3 = Color3.fromRGB(255,255,255)
+titll.Position = UDim2.new(0.754,0,0.16,0)
+titll.Size = UDim2.new(0,47,0,34)
+local titll2 = Instance.new("TextLabel")
+titll2.Parent = jumpbut
+titll2.Name = "description"
+titll2.Font = Enum.Font.Michroma
+titll2.TextSize = 20
+titll2.Text = "infinity Jump"
+titll2.BackgroundTransparency = 1
+titll2.TextColor3 = Color3.fromRGB(255,255,255)
+titll2.Position = UDim2.new(0,0,0,0)
+titll2.Size = UDim2.new(0,200,0,50)
+--
+local infiniteJumpEnabled = false
+jumpbut.MouseButton1Click:Connect(function()
+	infiniteJumpEnabled = not infiniteJumpEnabled
+	game:GetService("UserInputService").JumpRequest:Connect(function()
+		if infiniteJumpEnabled then
+			game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
+		end
+	end)
+end)
+local actt
+
+jumpbut.MouseButton1Click:Connect(function()
+	if infiniteJumpEnabled == false then
+		titll.Text = "On"
+		actt = true
+	elseif infiniteJumpEnabled == true then
+		titll.Text = "Off"
+		actt = false
+	end
+end)
