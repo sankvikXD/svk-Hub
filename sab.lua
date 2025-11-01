@@ -217,13 +217,13 @@ uis.InputBegan:Connect(function(input)
 end)
 --
 pl.MouseButton1Click:Connect(function()
-	inf.Visible = true
+	jumpbut.Visible = true
 end)
 
 esp.MouseButton1Click:Connect(function()
-	inf.Visible = false
+	jumpbut.Visible = false
 end)
 
 stealr.MouseButton1Click:Connect(function()
-	inf.Visible = false
+	jumpbut.Visible = false
 end)
