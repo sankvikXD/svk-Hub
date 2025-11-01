@@ -185,7 +185,52 @@ titll2.TextColor3 = Color3.fromRGB(255,255,255)
 titll2.Position = UDim2.new(0,0,0,0)
 titll2.Size = UDim2.new(0,200,0,50)
 --
+local hum = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
+local active
+local part = Instance.new("Part")
+local hrp = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+--
+platbut.MouseButton1Click:Connect(function()
+   	active = true
+    button1.BackgroundColor3 = Color3.fromRGB(60, 150, 20)
+	Instance.new("Part")
+	part.Name = "Platform"
+	part.Parent = fold
+	part.Size = Vector3.new(10,1,10)
+	part.Anchored = true
+	part.Position = hrp.Position - Vector3.new(0,3,0)
+	while debug do
+		part.CFrame = part.CFrame + Vector3.new(0,0.3,0)
+		wait(0.01)
+		part.CFrame = hrp.CFrame - Vector3.new(0, 3, 0)
+		part.Rotation = Vector3.new(0,0,0)
+	end
+end)
+--
+local col
 
+platbut.MouseButton1Click:Connect(function()
+   if active == true then
+      wait(0.0000000001)
+      titll.Text = "Off"
+      part.CanCollide = false
+      part.Transparency = 1
+      active = false
+      col = false
+    end
+end)
+--
+
+platbut.MouseButton1Click:Connect(function()
+     if col == false then
+        col = true
+        wait(0.0000000001)
+      titll.Text = "On"
+        part.CanCollide = true
+        part.Transparency = 0
+        active = true
+     end                             
+end)
 --
 local uis = game:GetService("UserInputService")
 uis.InputBegan:Connect(function(input)
