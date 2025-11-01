@@ -177,33 +177,13 @@ titll2.Parent = jumpbut
 titll2.Name = "description"
 titll2.Font = Enum.Font.Michroma
 titll2.TextSize = 20
-titll2.Text = "infinity Jump"
+titll2.Text = "Platform"
 titll2.BackgroundTransparency = 1
 titll2.TextColor3 = Color3.fromRGB(255,255,255)
 titll2.Position = UDim2.new(0,0,0,0)
 titll2.Size = UDim2.new(0,200,0,50)
 --
-local infiniteJumpEnabled = false
-jumpbut.MouseButton1Click:Connect(function()
-	infiniteJumpEnabled = not infiniteJumpEnabled
-	game:GetService("UserInputService").JumpRequest:Connect(function()
-		if infiniteJumpEnabled then
-			wait(0.1)
-			game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
-		end
-	end)
-end)
-local actt
 
-jumpbut.MouseButton1Click:Connect(function()
-	if infiniteJumpEnabled == false then
-		titll.Text = "On"
-		actt = true
-	elseif infiniteJumpEnabled == true then
-		titll.Text = "Off"
-		actt = false
-	end
-end)
 --
 local uis = game:GetService("UserInputService")
 uis.InputBegan:Connect(function(input)
@@ -217,7 +197,7 @@ uis.InputBegan:Connect(function(input)
 end)
 --
 pl.MouseButton1Click:Connect(function()
-	jumpbut.Visible = true
+	jumpbut.Visible = false
 end)
 
 esp.MouseButton1Click:Connect(function()
@@ -225,5 +205,5 @@ esp.MouseButton1Click:Connect(function()
 end)
 
 stealr.MouseButton1Click:Connect(function()
-	jumpbut.Visible = false
+	jumpbut.Visible = true
 end)
