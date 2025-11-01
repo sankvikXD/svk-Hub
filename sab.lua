@@ -192,19 +192,28 @@ local hrp = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
 --
 platbut.MouseButton1Click:Connect(function()
    	active = true
+		print(1)
    titll.Text = "On"
+		print(1)
 	Instance.new("Part")
+		print(1)
 	part.Name = "Platform"
+		print(1)
 	part.Parent = game.Workspace
+		print(1)
 	part.Size = Vector3.new(10,1,10)
+		print(1)
 	part.Anchored = true
+		print(1)
 	part.Position = hrp.Position - Vector3.new(0,3,0)
+		print(1)
 	while debug do
 		part.CFrame = part.CFrame + Vector3.new(0,0.3,0)
 		wait(0.01)
 		part.CFrame = hrp.CFrame - Vector3.new(0, 3, 0)
 		part.Rotation = Vector3.new(0,0,0)
 	end
+		print(1)
 end)
 --
 local col
