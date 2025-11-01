@@ -253,7 +253,3 @@ end)
 stealr.MouseButton1Click:Connect(function()
 	platbut.Visible = true
 end)
-
-platbut.MouseButton1Click:Connect(function()
-print(11111111)
-	end)
