@@ -215,3 +215,14 @@ uis.InputBegan:Connect(function(input)
 	end
 end)
 --
+pl.MouseButton1Click:Connect(function()
+	inf.Visible = true
+end)
+
+esp.MouseButton1Click:Connect(function()
+	inf.Visible = false
+end)
+
+stealr.MouseButton1Click:Connect(function()
+	inf.Visible = false
+end)
