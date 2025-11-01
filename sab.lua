@@ -150,6 +150,7 @@ end)
 local platbut = Instance.new("TextButton")
 Instance.new("TextButton")
 platbut.Parent = fr
+platbut.Visible = false
 platbut.Name = "platform"
 platbut.Size = UDim2.new(0,342,0,50)
 platbut.Position = UDim2.new(0.379,0,0.168,0)
