@@ -188,6 +188,7 @@ jumpbut.MouseButton1Click:Connect(function()
 	infiniteJumpEnabled = not infiniteJumpEnabled
 	game:GetService("UserInputService").JumpRequest:Connect(function()
 		if infiniteJumpEnabled then
+			wait(0.1)
 			game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
 		end
 	end)
