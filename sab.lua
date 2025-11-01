@@ -99,6 +99,7 @@ st2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 st2.Color = Color3.fromRGB(0,0,15)
 st2.Parent = pl
 Instance.new("UICorner")
+Instance.new("UICorner").Parent = pl
 --
 local stealr = Instance.new("TextButton")
 Instance.new("TextButton")
