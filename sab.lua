@@ -81,7 +81,6 @@ st1.Color = Color3.fromRGB(0,0,15)
 st1.Parent = esp
 Instance.new("UICorner")
 Instance.new("UICorner").Parent = esp
-Instance.new("UICorner").CornerRadius = UDim.new(0,20)
 --
 local pl = Instance.new("TextButton")
 Instance.new("TextButton")
@@ -100,8 +99,6 @@ st2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 st2.Color = Color3.fromRGB(0,0,15)
 st2.Parent = pl
 Instance.new("UICorner")
-Instance.new("UICorner").Parent = pl
-Instance.new("UICorner").CornerRadius = UDim.new(0,20)
 --
 local stealr = Instance.new("TextButton")
 Instance.new("TextButton")
@@ -121,7 +118,6 @@ st3.Color = Color3.fromRGB(0,0,15)
 st3.Parent = stealr
 Instance.new("UICorner")
 Instance.new("UICorner").Parent = stealr
-Instance.new("UICorner").CornerRadius = UDim.new(0,20)
 --
 esp.MouseButton1Click:Connect(function()
   st1.Color = Color3.fromRGB(90,90,90)
