@@ -21,3 +21,44 @@ Instance.new("UIDragDetector").Parent = fr
 Instance.new("UICorner")
 Instance.new("UICorner").Parent = fr
 Instance.new("UICorner").CornerRadius = UDim.new(0,5)
+local stroke = Instance.new("UIStroke")
+Instance.new("UIStroke")
+stroke.Parent = fr
+stroke.Color = Color3.fromRGB(0,96,99)
+--
+local fr1 = Instance.new("Frame")
+fr1.BackgroundColor3 = Color3.fromRGB(0,96,99)
+Instance.new("Frame")
+fr1.Size = UDim2.new(0,2,0,391)
+fr1.Position = UDim2.new(0.351,0,0,0)
+fr1.Parent = fr
+fr1.Name = "otd"
+local fr2 = Instance.new("Frame")
+fr2.Parent = fr
+fr2.Size = UDim2.new(0,570,0,2)
+fr2.Position = UDim2.new(0,0,0.128,0)
+fr2.Name = "otdelka"
+fr2.BackgroundColor3 = Color3.fromRGB(0,96,99)
+--
+local title = Instance.new("TextLabel")
+Instance.new("TextLabel")
+title.Parent = fr
+title.Text = "sakus Hub"
+title.TextSize = 35
+title.Name = "svk"
+title.Position = UDim2.new(0.002,0,0,0)
+title.Size = UDim2.new(0,200,0,50)
+title.TextColor3 = Color3.fromRGB(255,255,255)
+title.BackgroundTransparency = 1
+title.Font = Enum.Font.Michroma
+local title2 = Instance.new("TextLabel")
+Instance.new("TextLabel")
+title2.Parent = fr
+title2.Text = "Universal Script For SAB"
+title2.TextSize = 25
+title2.Name = "desc"
+title2.Position = UDim2.new(0.508,0,0.004,0)
+title2.Size = UDim2.new(0,200,0,50)
+title2.TextColor3 = Color3.fromRGB(255,255,255)
+title2.BackgroundTransparency = 1
+title2.Font = Enum.Font.Michroma
