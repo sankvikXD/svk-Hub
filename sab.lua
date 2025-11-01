@@ -192,7 +192,7 @@ local hrp = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
 --
 platbut.MouseButton1Click:Connect(function()
    	active = true
-    button1.BackgroundColor3 = Color3.fromRGB(60, 150, 20)
+   titll.Text = "On"
 	Instance.new("Part")
 	part.Name = "Platform"
 	part.Parent = fold
