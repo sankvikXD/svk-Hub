@@ -147,23 +147,23 @@ stealr.MouseButton1Click:Connect(function()
     esp.BackgroundTransparency = 1
 end)
 -- 
-local jumpbut = Instance.new("TextButton")
+local platbut = Instance.new("TextButton")
 Instance.new("TextButton")
-jumpbut.Parent = fr
-jumpbut.Name = "infjump"
-jumpbut.Size = UDim2.new(0,342,0,50)
-jumpbut.Position = UDim2.new(0.379,0,0.168,0)
-jumpbut.BackgroundTransparency = 0.85
+platbut.Parent = fr
+platbut.Name = "platform"
+platbut.Size = UDim2.new(0,342,0,50)
+platbut.Position = UDim2.new(0.379,0,0.168,0)
+platbut.BackgroundTransparency = 0.85
 Instance.new("UICorner")
-Instance.new("UICorner").Parent = jumpbut
-jumpbut.Text = ""
+Instance.new("UICorner").Parent = platbut
+platbut.Text = ""
 local strok = Instance.new("UIStroke")
 Instance.new("UIStroke")
-strok.Parent = jumpbut
+strok.Parent = platbut
 strok.Color = Color3.fromRGB(141,141,141)
 strok.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 local titll = Instance.new("TextLabel")
-titll.Parent = jumpbut
+titll.Parent = platbut
 titll.Name = "status"
 titll.Font = Enum.Font.Michroma
 titll.TextSize = 20
@@ -173,7 +173,7 @@ titll.TextColor3 = Color3.fromRGB(255,255,255)
 titll.Position = UDim2.new(0.754,0,0.16,0)
 titll.Size = UDim2.new(0,47,0,34)
 local titll2 = Instance.new("TextLabel")
-titll2.Parent = jumpbut
+titll2.Parent = platbut
 titll2.Name = "description"
 titll2.Font = Enum.Font.Michroma
 titll2.TextSize = 20
@@ -197,13 +197,13 @@ uis.InputBegan:Connect(function(input)
 end)
 --
 pl.MouseButton1Click:Connect(function()
-	jumpbut.Visible = false
+	platbut.Visible = false
 end)
 
 esp.MouseButton1Click:Connect(function()
-	jumpbut.Visible = false
+	platbut.Visible = false
 end)
 
 stealr.MouseButton1Click:Connect(function()
-	jumpbut.Visible = true
+	platbut.Visible = true
 end)
