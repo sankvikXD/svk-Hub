@@ -208,7 +208,7 @@ platbut.MouseButton1Click:Connect(function()
 end)
 --
 local col
-
+--
 platbut.MouseButton1Click:Connect(function()
    if active == true then
       wait(0.0000000001)
@@ -220,7 +220,6 @@ platbut.MouseButton1Click:Connect(function()
     end
 end)
 --
-
 platbut.MouseButton1Click:Connect(function()
      if col == false then
         col = true
