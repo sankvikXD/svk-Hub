@@ -15,7 +15,8 @@ fr.Name = "svkFrame"
 --
 fr.BackgroundColor3 = Color3.fromRGB(0,0,15)
 fr.Size = UDim2.new(0,570,0,391)
-Instance.new("UICorner")
+fr.Position = UDim2.new(0.347,0,0.137,0)
 fr.Draggable = true
+Instance.new("UICorner")
 Instance.new("UICorner").Parent = fr
 Instance.new("UICorner").CornerRadius = UDim.new(0,5)
