@@ -147,4 +147,3 @@ stealr.MouseButton1Click:Connect(function()
     esp.BackgroundTransparency = 1
 end)
 -- 
-
