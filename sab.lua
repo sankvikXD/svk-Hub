@@ -146,3 +146,5 @@ stealr.MouseButton1Click:Connect(function()
     pl.BackgroundTransparency = 1
     esp.BackgroundTransparency = 1
 end)
+-- 
+
