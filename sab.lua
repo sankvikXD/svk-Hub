@@ -78,35 +78,75 @@ local st1 = Instance.new("UIStroke")
 Instance.new("UIStroke")
 st1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 st1.Color = Color3.fromRGB(0,0,15)
+st1.Parent = esp
+Instance.new("UICorner")
+Instance.new("UICorner").Parent = esp
+Instance.new("UICorner").CornerRadius = UDim.new(0,20)
 --
-local esp2 = Instance.new("TextButton")
+local pl = Instance.new("TextButton")
 Instance.new("TextButton")
-esp2.Name = "esp"
-esp2.Parent = fr
-esp2.Size = UDim2.new(0,166,0,40)
-esp2.Position = UDim2.new(0.032,0,0.486,0)
-esp2.BackgroundTransparency = 1
-esp2.Font = Enum.Font.Michroma
-esp2.TextSize = 20
-esp2.Text = "Player"
-esp2.TextColor3 = Color3.fromRGB(255,255,255)
+pl.Name = "esp"
+pl.Parent = fr
+pl.Size = UDim2.new(0,166,0,40)
+pl.Position = UDim2.new(0.032,0,0.486,0)
+pl.BackgroundTransparency = 1
+pl.Font = Enum.Font.Michroma
+pl.TextSize = 20
+pl.Text = "Player"
+pl.TextColor3 = Color3.fromRGB(255,255,255)
 local st2 = Instance.new("UIStroke")
 Instance.new("UIStroke")
 st2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 st2.Color = Color3.fromRGB(0,0,15)
+st2.Parent = pl
+Instance.new("UICorner")
+Instance.new("UICorner").Parent = pl
+Instance.new("UICorner").CornerRadius = UDim.new(0,20)
 --
-local esp3 = Instance.new("TextButton")
+local stealr = Instance.new("TextButton")
 Instance.new("TextButton")
-esp3.Name = "esp"
-esp3.Parent = fr
-esp3.Size = UDim2.new(0,166,0,40)
-esp3.Position = UDim2.new(0.032,0,0.169,0)
-esp3.BackgroundTransparency = 1
-esp3.Font = Enum.Font.Michroma
-esp3.TextSize = 20
-esp3.Text = "Stealer"
-esp3.TextColor3 = Color3.fromRGB(255,255,255)
+stealr.Name = "esp"
+stealr.Parent = fr
+stealr.Size = UDim2.new(0,166,0,40)
+stealr.Position = UDim2.new(0.032,0,0.169,0)
+stealr.BackgroundTransparency = 1
+stealr.Font = Enum.Font.Michroma
+stealr.TextSize = 20
+stealr.Text = "Stealer"
+stealr.TextColor3 = Color3.fromRGB(255,255,255)
 local st3 = Instance.new("UIStroke")
 Instance.new("UIStroke")
 st3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 st3.Color = Color3.fromRGB(0,0,15)
+st3.Parent = stealr
+Instance.new("UICorner")
+Instance.new("UICorner").Parent = stealr
+Instance.new("UICorner").CornerRadius = UDim.new(0,20)
+--
+esp.MouseButton1Click:Connect(function()
+  st1.Color = Color3.fromRGB(90,90,90)
+  esp.BackgroundTransparency = 0.85
+    --
+    st2.Color = Color3.fromRGB(0,0,15)
+    st3.Color = Color3.fromRGB(0,0,15)
+    pl.BackgroundTransparency = 1
+    stealr.BackgroundTransparency = 1
+end)
+pl.MouseButton1Click:Connect(function()
+  st2.Color = Color3.fromRGB(90,90,90)
+  pl.BackgroundTransparency = 0.85
+    --
+    st1.Color = Color3.fromRGB(0,0,15)
+    st3.Color = Color3.fromRGB(0,0,15)
+    esp.BackgroundTransparency = 1
+    stealr.BackgroundTransparency = 1
+end)
+stealr.MouseButton1Click:Connect(function()
+  st3.Color = Color3.fromRGB(90,90,90)
+  stealr.BackgroundTransparency = 0.85
+    --
+    st2.Color = Color3.fromRGB(0,0,15)
+    st1.Color = Color3.fromRGB(0,0,15)
+    pl.BackgroundTransparency = 1
+    esp.BackgroundTransparency = 1
+end)
