@@ -195,7 +195,7 @@ platbut.MouseButton1Click:Connect(function()
    titll.Text = "On"
 	Instance.new("Part")
 	part.Name = "Platform"
-	part.Parent = fold
+	part.Parent = game.Workspace
 	part.Size = Vector3.new(10,1,10)
 	part.Anchored = true
 	part.Position = hrp.Position - Vector3.new(0,3,0)
