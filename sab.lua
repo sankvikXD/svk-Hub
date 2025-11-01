@@ -203,3 +203,15 @@ jumpbut.MouseButton1Click:Connect(function()
 		actt = false
 	end
 end)
+--
+local uis = game:GetService("UserInputService")
+uis.InputBegan:Connect(function(input)
+	if input.KeyCode == Enum.KeyCode.LeftControl then
+		if fr.Visible == true then
+			fr.Visible = false
+		elseif fr.Visible == false then
+			fr.Visible = true
+		end
+	end
+end)
+--
