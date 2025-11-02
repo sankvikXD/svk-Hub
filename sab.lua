@@ -211,11 +211,11 @@ local hrp = hum:WaitForChild("HumanoidRootPart")
 platbut.MouseButton1Click:Connect(function()
 if fl == false then
 		fl = true
-		startFloat(hrp)
+		start()
 		titll.Text = "On"
 	else
 		fl = false
-		stopFloat()
+		stop()
 		titll.Text = "Off"
 	end
 end)
