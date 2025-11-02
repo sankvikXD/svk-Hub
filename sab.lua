@@ -16,7 +16,8 @@ fr.Name = "svkFrame"
 fr.BackgroundColor3 = Color3.fromRGB(0,0,15)
 fr.Size = UDim2.new(0,570,0,391)
 fr.Position = UDim2.new(0.347,0,0.137,0)
-fr.Draggable = true
+Instance.new("UIDragDetector")
+Instance.new("UIDragDetector").Parent = fr
 Instance.new("UICorner")
 Instance.new("UICorner").Parent = fr
 Instance.new("UICorner").CornerRadius = UDim.new(0,5)
@@ -219,8 +220,7 @@ local function stopfloat()
 end
 --
 local uis = game:GetService("UserInputService")
-uis.InputBegan:Connect(function(input)
-	if input.KeyCode == Enum.KeyCode.Q then
+platbut.MouseButton1Click:Connect(function()
 		if active == false then
 			active = true
 			startfloat()
@@ -230,7 +230,6 @@ uis.InputBegan:Connect(function(input)
 			stopfloat()
 			titll.Text = "Off"
 		end
-	end
 end)
 --
 uis.InputBegan:Connect(function(input)
