@@ -185,6 +185,19 @@ titll2.TextColor3 = Color3.fromRGB(255,255,255)
 titll2.Position = UDim2.new(0,0,0,0)
 titll2.Size = UDim2.new(0,200,0,50)
 --
+pl.MouseButton1Click:Connect(function()
+	platbut.Visible = false
+end)
+
+esp.MouseButton1Click:Connect(function()
+	platbut.Visible = false
+end)
+
+stealr.MouseButton1Click:Connect(function()
+	platbut.Visible = true
+end)
+
+--
 local hum = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
 --
 	local player = game.Players.LocalPlayer
@@ -195,7 +208,7 @@ local hrp = hum:WaitForChild("HumanoidRootPart")
 	local function start()
 		if fl then return end
 		fl = true
-		floatConnection = rs.Heartbeat:Connect(function()
+		floatcon = rs.Heartbeat:Connect(function()
 			if hrp and fl then
 				hrp.Velocity = Vector3.new(hrp.Velocity.X, 2, hrp.Velocity.Z)
 			end
@@ -231,14 +244,3 @@ uis.InputBegan:Connect(function(input)
 	end
 end)
 --
-pl.MouseButton1Click:Connect(function()
-	platbut.Visible = false
-end)
-
-esp.MouseButton1Click:Connect(function()
-	platbut.Visible = false
-end)
-
-stealr.MouseButton1Click:Connect(function()
-	platbut.Visible = true
-end)
