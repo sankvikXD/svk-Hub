@@ -186,49 +186,38 @@ titll2.Position = UDim2.new(0,0,0,0)
 titll2.Size = UDim2.new(0,200,0,50)
 --
 local hum = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
-local active
-local part = Instance.new("Part")
-local hrp = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
 --
-platbut.MouseButton1Click:Connect(function()
-   	active = true
-    titll.Text = "On"
-	Instance.new("Part")
-	part.Name = "Platform"
-	part.Parent = game.Workspace
-	part.Size = Vector3.new(10,1,10)
-	part.Anchored = true
-	part.Position = hrp.Position - Vector3.new(0,3,0)
-	while debug do
-		part.CFrame = part.CFrame + Vector3.new(0,0.3,0)
-		wait(0.01)
-		part.CFrame = hrp.CFrame - Vector3.new(0, 3, 0)
-		part.Rotation = Vector3.new(0,0,0)
+	local player = game.Players.LocalPlayer
+local rs = game:GetService("RunService")
+local fl = false
+local floatcon
+local hrp = hum:WaitForChild("HumanoidRootPart")
+	local function start()
+		if fl then return end
+		fl = true
+		floatConnection = rs.Heartbeat:Connect(function()
+			if hrp and fl then
+				hrp.Velocity = Vector3.new(hrp.Velocity.X, 2, hrp.Velocity.Z)
+			end
+		end)
 	end
-end)
---
-local col
---
-platbut.MouseButton1Click:Connect(function()
-   if active == true then
-      wait(0.0000000001)
-      titll.Text = "Off"
-      part.CanCollide = false
-      part.Transparency = 1
-      active = false
-      col = false
-    end
-end)
+
+	local function stop()
+		fl = false
+		if floatcon then floatcon:Disconnect() end
+		floatcon = nil
+	end 
 --
 platbut.MouseButton1Click:Connect(function()
-     if col == false then
-        col = true
-        wait(0.0000000001)
-      titll.Text = "On"
-        part.CanCollide = true
-        part.Transparency = 0
-        active = true
-     end                             
+if fl == false then
+		fl = true
+		startFloat(hrp)
+		titll.Text = "On"
+	else
+		fl = false
+		stopFloat()
+		titll.Text = "Off"
+	end
 end)
 --
 local uis = game:GetService("UserInputService")
