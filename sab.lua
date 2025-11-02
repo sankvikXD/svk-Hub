@@ -221,7 +221,7 @@ end
 --
 local uis = game:GetService("UserInputService")
 uis.InputBegan:Connect(function(input)
-	if input.KeyCode == Enum.KeyCode.Q then
+	if input.KeyCode == Enum.KeyCode.R then
 		if active == false then
 			active = true
 			startfloat()
