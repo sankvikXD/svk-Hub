@@ -218,13 +218,14 @@ local function stop()
 	floatcon = nil
 end 
 --
+local flo
 platbut.MouseButton1Click:Connect(function()
-if fl == false then
-		fl = true
+if flo == false then
+		flo = true
 		start()
 		titll.Text = "On"
-	elseif fl == true then
-		fl = false
+	elseif flo == true then
+		flo = false
 		stop()
 		titll.Text = "Off"
 	end
