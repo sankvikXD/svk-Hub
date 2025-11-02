@@ -219,7 +219,7 @@ local function stopfloat()
 end
 --
 local uis = game:GetService("UserInputService")
-uis.InputBegan:Connect(function(input) or platbut.MouseButton1Click:Connect(function()
+uis.InputBegan:Connect(function(input)
 	if input.KeyCode == Enum.KeyCode.Q then
 		if active == false then
 			active = true
