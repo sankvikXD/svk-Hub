@@ -179,7 +179,7 @@ titll2.Parent = platbut
 titll2.Name = "description"
 titll2.Font = Enum.Font.Michroma
 titll2.TextSize = 20
-titll2.Text = "Steal Upstairs"
+titll2.Text = "Float"
 titll2.BackgroundTransparency = 1
 titll2.TextColor3 = Color3.fromRGB(255,255,255)
 titll2.Position = UDim2.new(0,0,0,0)
@@ -196,37 +196,34 @@ end)
 stealr.MouseButton1Click:Connect(function()
 	platbut.Visible = true
 end)
-
---
-local hum = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
---
-	local player = game.Players.LocalPlayer
+-- 1 part
+local player = game.Players.LocalPlayer
 local rs = game:GetService("RunService")
 local fl = false
 local floatcon
-local hrp = hum:WaitForChild("HumanoidRootPart")
-	local function start()
-		if fl then return end
-		fl = true
-		floatcon = rs.Heartbeat:Connect(function()
-			if hrp and fl then
-				hrp.Velocity = Vector3.new(hrp.Velocity.X, 2, hrp.Velocity.Z)
-			end
-		end)
-	end
+local hrp = player.Character:WaitForChild("HumanoidRootPart")
+local function start()
+	if fl then return end
+	fl = true
+	floatcon = rs.Heartbeat:Connect(function()
+		if hrp and fl then
+			hrp.Velocity = Vector3.new(hrp.Velocity.X, 2, hrp.Velocity.Z)
+		end
+	end)
+end
 
-	local function stop()
-		fl = false
-		if floatcon then floatcon:Disconnect() end
-		floatcon = nil
-	end 
+local function stop()
+	fl = false
+	if floatcon then floatcon:Disconnect() end
+	floatcon = nil
+end 
 --
 platbut.MouseButton1Click:Connect(function()
 if fl == false then
 		fl = true
 		start()
 		titll.Text = "On"
-	else
+	elseif fl == true then
 		fl = false
 		stop()
 		titll.Text = "Off"
