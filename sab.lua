@@ -221,7 +221,7 @@ end
 --
 local uis = game:GetService("UserInputService")
 uis.InputBegan:Connect(function(input)
-	if input.KeyCode == Enum.KeyCode.Q then
+	if input.KeyCode == Enum.KeyCode.Q or platbut.MouseButton1Click then
 		if active == false then
 			active = true
 			startfloat()
@@ -232,17 +232,6 @@ uis.InputBegan:Connect(function(input)
 			titll.Text = "Off"
 		end
 	end
-end)
-platbut.MouseButton1Click:Connect(function()
-	if active == false then
-			active = true
-			startfloat()
-			titll.Text = "On"
-		else
-			active = false
-			stopfloat()
-			titll.Text = "Off"
-		end
 end)
 --
 uis.InputBegan:Connect(function(input)
