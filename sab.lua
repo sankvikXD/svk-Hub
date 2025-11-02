@@ -197,27 +197,36 @@ stealr.MouseButton1Click:Connect(function()
 	platbut.Visible = true
 end)
 --
-local player = game.Players.LocalPlayer
 local rs = game:GetService("RunService")
+local hrp = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
 local fl = false
-local floatcon
-local hrp = player.Character:WaitForChild("HumanoidRootPart")
-local flo = false
+local float
+local active = false
+--
+local function start()
+	if fl then return end
+	fl = true
+	float = rs.Heartbeat:Connect(function()
+		if hrp and fl then
+			hrp.Velocity = Vector3.new(hrp.Velocity.X, 2, hrp.Velocity.Z)
+		end
+	end)
+end
+
+local function stop()
+	fl = false
+	if float then float:Disconnect() end
+	float = nil
+end
+--
 platbut.MouseButton1Click:Connect(function()
-	if flo == false then
-		flo = true
-		if fl then return end
-		fl = true
-		floatcon = rs.Heartbeat:Connect(function()
-			if hrp and fl then
-				hrp.Velocity = Vector3.new(hrp.Velocity.X, 2, hrp.Velocity.Z)
-			end
+	if active == false then
+		active = true
+		start()
 			titll.Text = "On"
-	elseif flo == true then
-		flo = false
-		fl = false
-		if floatcon then floatcon:Disconnect() end
-		floatcon = nil
+	else
+		active = false
+		stop()
 			titll.Text = "Off"
 	end
 end)
