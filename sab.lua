@@ -214,11 +214,13 @@ platbut.MouseButton1Click:Connect(function()
 				hrp.Velocity = Vector3.new(hrp.Velocity.X, 2, hrp.Velocity.Z)
 			end
 		end)
+			titll.Text = "On"
 	elseif flo == true then
 		flo = false
 		fl = false
 		if floatcon then floatcon:Disconnect() end
 		floatcon = nil
+			titll.Text = "Off"
 	end
 end)
 --
