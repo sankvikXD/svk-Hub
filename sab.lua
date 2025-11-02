@@ -84,7 +84,7 @@ Instance.new("UICorner").Parent = esp
 --
 local pl = Instance.new("TextButton")
 Instance.new("TextButton")
-pl.Name = "esp"
+pl.Name = "player"
 pl.Parent = fr
 pl.Size = UDim2.new(0,166,0,40)
 pl.Position = UDim2.new(0.032,0,0.486,0)
@@ -103,7 +103,7 @@ Instance.new("UICorner").Parent = pl
 --
 local stealr = Instance.new("TextButton")
 Instance.new("TextButton")
-stealr.Name = "esp"
+stealr.Name = "stl"
 stealr.Parent = fr
 stealr.Size = UDim2.new(0,166,0,40)
 stealr.Position = UDim2.new(0.032,0,0.169,0)
