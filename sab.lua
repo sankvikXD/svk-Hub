@@ -203,7 +203,7 @@ local fl = false
 local float
 local active = false
 --
-local function start()
+local function startfloat()
 	if fl then return end
 	fl = true
 	float = rs.Heartbeat:Connect(function()
@@ -213,7 +213,7 @@ local function start()
 	end)
 end
 
-local function stop()
+local function stopfloat()
 	fl = false
 	if float then float:Disconnect() end
 	float = nil
@@ -224,6 +224,18 @@ uis.InputBegan:Connect(function(input)
 	if input.KeyCode == Enum.KeyCode.Q then
 		if active == false then
 			active = true
+			startfloat()
+			titll.Text = "On"
+		else
+			active = false
+			stopfloat()
+			titll.Text = "Off"
+		end
+	end
+end)
+platbut.MouseButton1Click:Connect(function()
+	if active == false then
+			active = true
 			start()
 			titll.Text = "On"
 		else
@@ -231,7 +243,6 @@ uis.InputBegan:Connect(function(input)
 			stop()
 			titll.Text = "Off"
 		end
-	end
 end)
 --
 uis.InputBegan:Connect(function(input)
