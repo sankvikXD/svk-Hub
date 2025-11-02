@@ -219,19 +219,21 @@ local function stop()
 	float = nil
 end
 --
-platbut.MouseButton1Click:Connect(function()
-	if active == false then
-		active = true
-		start()
+local uis = game:GetService("UserInputService")
+uis.InputBegan:Connect(function(input)
+	if input.KeyCode == Enum.KeyCode.Q then
+		if active == false then
+			active = true
+			start()
 			titll.Text = "On"
-	else
-		active = false
-		stop()
+		else
+			active = false
+			stop()
 			titll.Text = "Off"
+		end
 	end
 end)
 --
-local uis = game:GetService("UserInputService")
 uis.InputBegan:Connect(function(input)
 	if input.KeyCode == Enum.KeyCode.LeftControl then
 		if fr.Visible == true then
