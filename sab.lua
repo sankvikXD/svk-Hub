@@ -235,7 +235,7 @@ uis.InputBegan:Connect(function(input)
 end)
 --
 uis.InputBegan:Connect(function(input)
-	if input.KeyCode == Enum.KeyCode.LeftControl then
+	if input.KeyCode == Enum.KeyCode.K then
 		if fr.Visible == true then
 			fr.Visible = false
 		elseif fr.Visible == false then
