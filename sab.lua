@@ -236,11 +236,11 @@ end)
 platbut.MouseButton1Click:Connect(function()
 	if active == false then
 			active = true
-			start()
+			startfloat()
 			titll.Text = "On"
 		else
 			active = false
-			stop()
+			stopfloat()
 			titll.Text = "Off"
 		end
 end)
