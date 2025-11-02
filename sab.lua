@@ -203,7 +203,6 @@ local fl = false
 local floatcon
 local hrp = player.Character:WaitForChild("HumanoidRootPart")
 local flo = false
-local platbut = script.Parent
 platbut.MouseButton1Click:Connect(function()
 	if flo == false then
 			print(1)
