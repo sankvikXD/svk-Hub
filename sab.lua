@@ -206,14 +206,18 @@ local flo = false
 local platbut = script.Parent
 platbut.MouseButton1Click:Connect(function()
 	if flo == false then
+			print(1)
 		flo = true
+			print(1)
 		if fl then return end
+			print(1)
 		fl = true
+			print(1)
 		floatcon = rs.Heartbeat:Connect(function()
 			if hrp and fl then
 				hrp.Velocity = Vector3.new(hrp.Velocity.X, 2, hrp.Velocity.Z)
 			end
-		end)
+			print(1)
 			titll.Text = "On"
 	elseif flo == true then
 		flo = false
