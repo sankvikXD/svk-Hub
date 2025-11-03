@@ -239,7 +239,7 @@ uis.InputBegan:Connect(function(input)
 end)
 --
 uis.InputBegan:Connect(function(input)
-	if input.KeyCode == Enum.KeyCode.N then
+	if input.KeyCode == Enum.KeyCode.RightShift then
 		if fr.Visible == true then
 			fr.Visible = false
 		elseif fr.Visible == false then
