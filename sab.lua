@@ -204,7 +204,8 @@ local float
 local active = false
 --
 local function startfloat()
-	if fl then return end
+	if fl then
+		return end
 	fl = true
 	float = rs.Heartbeat:Connect(function()
 		if hrp and fl then
@@ -215,7 +216,8 @@ end
 
 local function stopfloat()
 	fl = false
-	if float then float:Disconnect() end
+	if float then
+		float:Disconnect() end
 	float = nil
 end
 --
