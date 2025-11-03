@@ -24,6 +24,7 @@ Instance.new("UICorner").CornerRadius = UDim.new(0,5)
 local stroke = Instance.new("UIStroke")
 Instance.new("UIStroke")
 stroke.Parent = fr
+fr.Visible = false
 stroke.Color = Color3.fromRGB(90,90,90)
 --
 local fr1 = Instance.new("Frame")
