@@ -231,12 +231,24 @@ uis.InputBegan:Connect(function(input)
 			active = true
 			startfloat()
 			titll.Text = "On"
-		else
+		elseif active == true then
 			active = false
 			stopfloat()
 			titll.Text = "Off"
 		end
 	end
+end)
+--
+platbut.MouseButton1Click:Connect(function()
+		if active == false then
+			active = true
+			startfloat()
+			titll.Text = "On"
+		elseif active == true then
+			active = false
+			stopfloat()
+			titll.Text = "Off"
+		end
 end)
 --
 uis.InputBegan:Connect(function(input)
