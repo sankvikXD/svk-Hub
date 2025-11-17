@@ -25,6 +25,12 @@ Instance.new("UIDragDetector")
 Instance.new("UIDragDetector").Parent = mainfr
 mainfr.Position = UDim2.new(0.419,0,0.195,0)
 mainfr.Size = UDim2.new(0,306,0,324)
+-- Visible / Not Visible (KeyBind T)
+uis.InputBegan:Connect(function(input)
+	if input.KeyCode == Enum.KeyCode.T then
+		mainfr.Visible = not mainfr.Visible
+	end
+end)
 --
 local corner = Instance.new("UICorner")
 Instance.new("UICorner")
@@ -67,10 +73,12 @@ local stroke = Instance.new("UIStroke")
 Instance.new("UIStroke")
 stroke.Parent = fr
 stroke.Thickness = 2
+stroke.Color = Color3.fromRGB(255,255,255)
 --
+local rainbow = Instance.new("UIGradient")
 Instance.new("UIGradient")
-Instance.new("UIGradient").Parent = stroke
-Instance.new("UIGradient").Color = ColorSequence.new({
+rainbow.Parent = stroke
+rainbow.Color = ColorSequence.new({
 	ColorSequenceKeypoint.new(0,Color3.fromRGB(255,0,0)),
 	ColorSequenceKeypoint.new(0.178,Color3.fromRGB(255,170,0)),
 	ColorSequenceKeypoint.new(0.34,Color3.fromRGB(255,255,0)),
@@ -79,3 +87,25 @@ Instance.new("UIGradient").Color = ColorSequence.new({
 	ColorSequenceKeypoint.new(0.848,Color3.fromRGB(0,0,255)),
 	ColorSequenceKeypoint.new(1,Color3.fromRGB(190,0,255))
 })
+-- Labels
+local name = Instance.new("TextLabel")
+Instance.new("TextLabel")
+name.Parent = fr
+name.Position = UDim2.new(0.157,0,0,0)
+name.Size = UDim2.new(0,200,0,50)
+name.TextSize = 30
+name.Text = "svk AutoJoiner"
+name.Font = Enum.Font.Arcade
+name.BackgroundTransparency = 1
+name.TextColor3 = Color3.fromRGB(255,255,255)
+--
+local by = Instance.new("TextLabel")
+Instance.new("TextLabel")
+by.Parent = fr
+by.Position = UDim2.new(0.433,0,0.145,0)
+by.Size = UDim2.new(0,35,0,8)
+by.TextSize = 20
+by.Text = "by svk"
+by.Font = Enum.Font.Arcade
+by.BackgroundTransparency = 1
+by.TextColor3 = Color3.fromRGB(100,100,100)
