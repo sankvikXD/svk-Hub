@@ -109,3 +109,21 @@ by.Text = "by svk"
 by.Font = Enum.Font.Arcade
 by.BackgroundTransparency = 1
 by.TextColor3 = Color3.fromRGB(100,100,100)
+--
+local start = Instance.new("TextButton")
+Instance.new("TextButton")
+start.Parent = fr
+start.Text = ""
+start.Size = UDim2.new(0,271,0,50)
+start.Position = UDim2.new(0.036,0,0.236,0)
+start.TextColor3 = Color3.fromRGB(255,255,255)
+--
+local uic = Instance.new("UICorner")
+uic.Parent = start
+uic.CornerRadius = UDim.new(0,10)
+--
+local uis = Instance.new("UIStroke")
+Instance.new("UIStroke")
+uis.Thickness = 1
+uis.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+uis.Color = Color3.fromRGB(255,255,255)
