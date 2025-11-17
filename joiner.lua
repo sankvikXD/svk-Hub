@@ -118,12 +118,34 @@ start.Size = UDim2.new(0,271,0,50)
 start.Position = UDim2.new(0.036,0,0.236,0)
 start.TextColor3 = Color3.fromRGB(255,255,255)
 --
-local uic = Instance.new("UICorner")
+local uic
+uic = Instance.new("UICorner")
 uic.Parent = start
 uic.CornerRadius = UDim.new(0,10)
 --
-local uis = Instance.new("UIStroke")
-Instance.new("UIStroke")
-uis.Thickness = 1
+local uis
+uis = Instance.new("UIStroke")
 uis.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+uis.Parent = start
 uis.Color = Color3.fromRGB(255,255,255)
+--
+local uig
+uig = Instance.new("UIGradient")
+uig.Parent = start
+uig.Rotation = 45
+uig.Color = ColorSequence.new({
+	ColorSequenceKeypoint.new(0, Color3.fromRGB(60,60,60)),
+	ColorSequenceKeypoint.new(0.500, Color3.fromRGB(90,90,90)),
+	ColorSequenceKeypoint.new(1, Color3.fromRGB(60,60,60)),
+})
+--
+local lab = Instance.new("TextLabel")
+Instance.new("TextLabel")
+lab.Parent = start
+lab.Position = UDim2.new(0.253,0,0.08,0)
+lab.Size = UDim2.new(0,134,0,42)
+lab.TextSize = 30
+lab.Text = "Start"
+lab.Font = Enum.Font.Arcade
+lab.BackgroundTransparency = 1
+lab.TextColor3 = Color3.fromRGB(255,255,255)
