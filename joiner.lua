@@ -68,10 +68,9 @@ Instance.new("UIStroke")
 stroke.Parent = fr
 stroke.Thickness = 2
 --
-local rainbow = Instance.new("UIGradient")
 Instance.new("UIGradient")
-rainbow.Parent = stroke
-rainbow.Color = ColorSequence.new({
+Instance.new("UIGradient").Parent = stroke
+Instance.new("UIGradient").Color = ColorSequence.new({
 	ColorSequenceKeypoint.new(0,Color3.fromRGB(255,0,0)),
 	ColorSequenceKeypoint.new(0.178,Color3.fromRGB(255,170,0)),
 	ColorSequenceKeypoint.new(0.34,Color3.fromRGB(255,255,0)),
