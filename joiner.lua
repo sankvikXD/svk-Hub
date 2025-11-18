@@ -24,7 +24,7 @@ mainfr.Name = "svkMain"
 Instance.new("UIDragDetector")
 Instance.new("UIDragDetector").Parent = mainfr
 mainfr.Position = UDim2.new(0.419,0,0.195,0)
-mainfr.Size = UDim2.new(0,306,0,324)
+mainfr.Size = UDim2.new(0,306,0,226)
 -- Visible / Not Visible (KeyBind T)
 uis.InputBegan:Connect(function(input)
 	if input.KeyCode == Enum.KeyCode.T then
@@ -51,8 +51,8 @@ local fr = Instance.new("Frame")
 Instance.new("Frame")
 fr.Parent = mainfr
 fr.Name = "svkInMain"
-fr.Position = UDim2.new(0.419,0,0.195,0)
-fr.Size = UDim2.new(0,293,0,310)
+fr.Position = UDim2.new(0.02,0,0.019,0)
+fr.Size = UDim2.new(0,293,0,214)
 fr.Position = UDim2.new(0.02, 0,0.019, 0)
 --
 local corner1 = Instance.new("UICorner")
@@ -91,7 +91,7 @@ rainbow.Color = ColorSequence.new({
 local name = Instance.new("TextLabel")
 Instance.new("TextLabel")
 name.Parent = fr
-name.Position = UDim2.new(0.157,0,0,0)
+name.Position = UDim2.new(0.15,0,0,0)
 name.Size = UDim2.new(0,200,0,50)
 name.TextSize = 30
 name.Text = "svk AutoJoiner"
@@ -102,7 +102,7 @@ name.TextColor3 = Color3.fromRGB(255,255,255)
 local by = Instance.new("TextLabel")
 Instance.new("TextLabel")
 by.Parent = fr
-by.Position = UDim2.new(0.433,0,0.145,0)
+by.Position = UDim2.new(0.44,0,0.229,0)
 by.Size = UDim2.new(0,35,0,8)
 by.TextSize = 20
 by.Text = "by svk"
@@ -115,7 +115,7 @@ Instance.new("TextButton")
 start.Parent = fr
 start.Text = ""
 start.Size = UDim2.new(0,271,0,50)
-start.Position = UDim2.new(0.036,0,0.236,0)
+start.Position = UDim2.new(0.032,0,0.381,0)
 start.TextColor3 = Color3.fromRGB(255,255,255)
 --
 local uic
@@ -149,3 +149,25 @@ lab.Text = "Start"
 lab.Font = Enum.Font.Arcade
 lab.BackgroundTransparency = 1
 lab.TextColor3 = Color3.fromRGB(255,255,255)
+--
+local min
+min = Instance.new("TextBox")
+min.Parent = fr
+min.Text = "Min Income"
+min.Size = UDim2.new(0,269,0,50)
+min.Position = UDim2.new(0.039,0,0.653,0)
+min.BackgroundColor3 = Color3.fromRGB(27,27,27)
+min.TextColor3 = Color3.fromRGB(66,66,66)
+min.TextSize = 15
+min.Font = Enum.Font.SourceSans
+--
+local minSt
+minSt = Instance.new("UIStroke")
+minSt.Parent = min
+minSt.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+minSt.Color = Color3.fromRGB(0,0,0)
+--
+local minC
+minC = Instance.new("UICorner")
+minC.Parent = min
+minC.CornerRadius = UDim.new(0,10)
