@@ -66,7 +66,7 @@ grad1.Parent = fr
 grad1.Rotation = 45
 grad1.Color = ColorSequence.new({
 	ColorSequenceKeypoint.new(0 ,Color3.fromRGB(80,80,80)),
-	ColorSequenceKeypoint.new(0.500 ,Color3.fromRGB(75,75,75)),
+	ColorSequenceKeypoint.new(0.500 ,Color3.fromRGB(0,0,27)),
 	ColorSequenceKeypoint.new(1,Color3.fromRGB(80,80,80))
 })
 local stroke = Instance.new("UIStroke")
